@@ -7,26 +7,27 @@ import Clicker from "./components/Clicker";
 import ItemList from "./components/shop/ItemList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetail from "./components/shop/ItemDetail";
-import Products from "./components/shop/data/Products";
+import CocktailContainer from './components/Drinks/CocktailContainer';
+
 
 
 
 function App() {
   return (
     <>
-    
-      <NavBar />
-      <ItemListContainer greeting="THE MOST DELICIOUS DRINKS" />
-       <Inicio/>
-       <BrowserRouter>
-       <Routes>
-        <Route path={"/"} element={<Clicker/>} />
-        <Route path={"/shop"} element={<ItemList/>} />
-        <Route path={"/shop/item/ :id"} element={<ItemDetail/>} />
-       </Routes>
-       </BrowserRouter>
-       </>
-         
+      <BrowserRouter>
+        <NavBar />
+        <ItemListContainer greeting="THE MOST DELICIOUS DRINKS" />
+        <Inicio />
+        <CocktailContainer/>
+        <Routes>
+          <Route path={"/"} element={<Clicker />} />
+          <Route path={"/shop"} element={<ItemList />} />
+          <Route path={"/shop/item/ :id"} element={<ItemDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+
   );
 }
 

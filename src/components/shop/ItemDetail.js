@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import { Products } from './data/Products'
-import { useState } from "react-router-dom"
+import { useState } from "react"
 
 const ItemDetail = () => {
 
