@@ -5,6 +5,8 @@ import ItemCard from "./ItemCard"
 
 const ItemList = () => {
 
+  const [Items, setItems] = useState([])
+
   useEffect(() => {
     getProducts().then(response => {
       console.log(response);
@@ -16,7 +18,7 @@ const ItemList = () => {
   const getProducts = () => {
     return new Promise(resolve => {
       setTimeout(() => {
-        resolve(Products)
+        resolve( Products )
       }, 3000);
     })
   }
@@ -24,7 +26,7 @@ const ItemList = () => {
   return (
     <>
     <div>Drinks</div>
-    { ItemList.map( i => <ItemCard key={i.id} {...i}/> ) }
+    { Items.map( i => <ItemCard key={i.id} {...i}/> ) }
     </>
   )
 }

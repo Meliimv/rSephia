@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 const CocktailContainer = () => {
 
-    const [ people, setPeople] = useState([])
+    const [ People, setPeople] = useState([])
 useEffect(() => {
     getPeople()
 }, [])
@@ -22,7 +22,7 @@ const getPeople = () =>{
   return (
     <div>
         <h1>CocktailContainer</h1>
-        {getPeople.map( p=> <li key={p.URL}>{p.name }</li>) }
+        {People.map( p=> <li key={p.URL}>{p.name }</li>) }
         </div>
   )
 }

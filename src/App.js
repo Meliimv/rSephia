@@ -17,13 +17,13 @@ function App() {
     <>
       <BrowserRouter>
         <NavBar />
-        <ItemListContainer greeting="THE MOST DELICIOUS DRINKS" />
-        <Inicio />
-        <CocktailContainer/>
         <Routes>
-          <Route path={"/"} element={<Clicker />} />
-          <Route path={"/shop"} element={<ItemList />} />
-          <Route path={"/shop/item/ :id"} element={<ItemDetail />} />
+          <Route  path="/" element={<ItemListContainer greeting="THE MOST DELICIOUS DRINKS" />} />
+          <Route  path="/" element={<Inicio />} />
+          <Route  path="/components/Drinks" element={<CocktailContainer />} />
+          <Route  path="/" element={<Clicker />} />
+          <Route path="/components/shop" element={<ItemList />} />
+          <Route path="/components/shop/item/ :id" element={<ItemDetail />} />
         </Routes>
       </BrowserRouter>
     </>
